@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!--Added CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <h1>Crystals Collector!</h1>
+    </div>
+
+    <br>
+
+    <section div id="game">Instructions</section>
+
+
+    <!--Output for user instructions-->
+    <p> The game will start when you click on a crystal. Click on one of the four
+        crystals. Once you click on a crystal, you will be given a random number.
+        The object of the game is to match the random number.</p>
+
+    <p> After the random number is given, each crystal will be worth a certain amount
+        of points. The value of each crystal is hidden from you until you
+        click on a crystal. </p>
+
+    <p> You win the game by matching your total score to the random
+        number. You lose the game if your total score goes above
+        the random number. </p>
+
+    <p> Each time a new game starts, the game will change the
+        values of each crystal. </p>
+
+    <section div id="points">
+
+        <h6>Wins:</h6>
+        <p id="wins"></p>
+
+        <h6>Losses:</h6>
+        <p id="losses"></p>
+    </section>
+
+    <section div class="pics"></section>
+    <img src="assets/images/crystal1.jpg">
+    <img src="assets/images/crystal2.jpg">
+    <img src="assets/images/crystal3.jpg">
+    <img src="assets/images/crystal4.jpg">
+
+
+
+    <section div id="points">
+        <h6>Your total score is:</h6>
+        <p id="score"></p>
+    </section>
+
+    </div>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
