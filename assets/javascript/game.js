@@ -2,12 +2,12 @@ $(document).ready(function () {
 
     var wins = 0;
     var losses = 0;
-    var score = 0;
     var magicNumber = 0;
-    var crystalNumber1 = 0;
-    var crystalNumber2 = 0;
-    var crystalNumber3 = 0;
-    var crystalNumber4 = 0;
+    var totalScore = 0;
+    var crystal1 = 0;
+    var crystal2 = 0;
+    var crystal3 = 0;
+    var crystal4 = 0;
 
     /*
     ON PAGE LOAD
@@ -31,30 +31,65 @@ $(document).ready(function () {
                 *call reset function
                 *++losses */
 
-    function generateRandomMagicNumber() {
-        magicNumber = Math.floor(Math.random() * 101)+19;
-        $("#random").html("");
-      }
-        
-    function generateCrystalNumber1() {
-        crystalNumber1 = Math.floor(Math.random() * 11) + 1;
-       
+
+    magicNumber = Math.floor(Math.random() * 101 + 19);
+    $('#random').text(magicNumber);
+
+
+    crystal1 = Math.floor(Math.random() * 11) + 1;
+    crystal2 = Math.floor(Math.random() * 11) + 1;
+    crystal3 = Math.floor(Math.random() * 11) + 1;
+    crystal4 = Math.floor(Math.random() * 11) + 1;
+
+    $('.score').text(totalScore);//?
+
+    $('#numberWins').text(wins);
+    $('#numberLosses').text(losses);
+
+
+    $('.clear').on("click", function () {
+        totalScore = totalScore + crystal1;
+        console.log("New totalScore= " + totalScore);
+    })
+    $('.white').on("click", function () {
+        totalScore = totalScore + crystal2;
+        console.log("New totalScore= " + totalScore);
+    })
+    $('.blue').on("click", function () {
+        totalScore = totalScore + crystal3;
+        console.log("New totalScore= " + totalScore);
+    })
+    $('.pink').on("click", function () {
+        totalScore = totalScore + crystal4;
+        console.log("New totalScore= " + totalScore);
+    })
+
+
+
+    if (totalScore === magicNumber) {
+        wins++;
+        reset();
+        alert("You won!");
     }
-    function generateCrystalNumber2() {
-        crystalNumber2 = Math.floor(Math.random() * 11) + 1;
-        
-    function generateCrystalNumber3() {
-        crystalNumber3 = Math.floor(Math.random() * 11) + 1;
-        
+    else if (totalScore > magicNumber) {
+        losses++;
+        reset();
+        alert("You lost!");
     }
-    function generateCrystalNumber4() {
-        crystalNumber4 = Math.floor(Math.random() * 11) + 1;
-        
+
+    function reset() {
+        magicNumber = Math.floor(Math.random() * 101 + 19);       
+        $('#random').text(magicNumber);
+        crystal1 = Math.floor(Math.random() * 11) + 1;
+        crystal2 = Math.floor(Math.random() * 11) + 1;
+        crystal3 = Math.floor(Math.random() * 11) + 1;
+        crystal4 = Math.floor(Math.random() * 11) + 1;
+        totalScore = 0;
+        $('.score').text(totalScore);
     }
-    function reset(){        
-       score=0;      
-    }
-   
-    };
+
+    
+
+
 
 });

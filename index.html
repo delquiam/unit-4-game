@@ -23,86 +23,85 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">How to Play!</h3>
-                    </div>
-                    <div class="panel-body">
 
-                        <br>
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">How to Play!</h3>
+                </div>
+                <div class="panel-body">
 
-                        <p> The game will start when you click on a crystal. Click on one of the four
-                            crystals. Once you click on a crystal, you will be given a random number.
-                            The object of the game is to match the random number.</p>
+                    <p> The game will start when you click on a crystal. Click on one of the four
+                        crystals. Once you click on a crystal, you will be given a random number.
+                        The object of the game is to match the random number.</p>
 
-                        <p> After the random number is given, each crystal will be worth a certain amount
-                            of points. The value of each crystal is hidden from you until you
-                            click on a crystal. </p>
+                    <p> After the random number is given, each crystal will be worth a certain amount
+                        of points. The value of each crystal is hidden from you until you
+                        click on a crystal. </p>
 
-                        <p> You win the game by matching your total score to the random
-                            number. You lose the game if your total score goes above
-                            the random number. </p>
+                    <p> You win the game by matching your total score to the random
+                        number. You lose the game if your total score goes above
+                        the random number. </p>
 
-                        <p> Each time a new game starts, the game will change the
-                            values of each crystal. </p>
+                    <p> Each time a new game starts, the game will change the
+                        values of each crystal. </p>
 
-                    </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-4">
-                <section div id="random">
-                    <h6>Random Number</h6>
-                    <p id="random"></p>
-            </div>
-            </section>
-
-            <section div id="points">
-                <div class="col-md-3">
-                    <h6>Wins:</h6>
-                    <p id="wins"></p>
-                    <h6>Losses:</h6>
-                    <p id="losses"></p>
-                </div>
-            </section>
         </div>
     </div>
 
+    <div class="container1">
+        <div class="row">
 
-
+            <div class="col-sm-1">
+                <img src="assets/images/crystal1.png" class="img-fluid clear">
+            </div>
+            <div class="col-sm-1">
+                <img src="assets/images/crystal2.png" class="img-fluid white">
+            </div>
+            <div class="col-sm-1">
+                <img src="assets/images/crystal3.png" class="img-fluid blue">
+            </div>
+            <div class="col-sm-1">
+                <img src="assets/images/crystal4.png" class="img-fluid pink">
+            </div>
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-sm-2">
-            <img src="assets/images/crystal1.png" class="img-fluid img thumbnail">
+        <div class="col-sm-12">
+            <div id="magic">
+                <h6> Magic Number</h6>
+                <p id="random"></p>
+            </div>
         </div>
-        <div class="col-sm-2">
-            <img src="assets/images/crystal2.png" class="img-fluid img thumbnail">
-        </div>
-        <div class="col-sm-2">
-            <img src="assets/images/crystal3.png" class="img-fluid img thumbnail">
-        </div>
-        <div class="col-sm-2">
-            <img src="assets/images/crystal4.png" class="img-fluid img thumbnail">
-        </div>
-    </div>
     </div>
 
 
     <div class="row">
-        <div class="col-md-4">
-            <section div id="total">
-                <h6>Your total score is:</h6>
-                <p id="score"></p>
-
-            </section>
+        <div id="points">
+            <div class="col-sm-12">
+                <h6>Wins:</h6>
+                <p id="numberWins"></p>
+                <h6>Losses:</h6>
+                <p id="numberLosses"></p>
+            </div>
         </div>
     </div>
-    </div>
+
+
+    <div class="row">
+        <div id="totalScore">
+            <div class="col-sm-12">
+                <div class="score">
+                    <p> Your total score is:</p>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    
 
     <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </body>
