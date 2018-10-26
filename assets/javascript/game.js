@@ -26,10 +26,10 @@ $(document).ready(function () {
         *compare score with magic number
             *if score===magic number
                 *call reset function
-                *++ wins
+                 wins++
             *else if score>magic number
                 *call reset function
-                *++losses */
+                *losses++ */
 
 
     magicNumber = Math.floor(Math.random() * 101 + 19);
@@ -43,46 +43,57 @@ $(document).ready(function () {
 
     $('.score').text(totalScore);
 
-    $('#numberWins').text(wins);
-    $('#numberLosses').text(losses);
-
+    
 
     $('.clear').on("click", function () {
         totalScore = totalScore + crystal1;
         console.log("New totalScore= " + totalScore);
         $('#score').text(totalScore); 
+        if (totalScore === magicNumber) {
+           win();
+        }
+        else if (totalScore > magicNumber) {
+            lose();
+        }   
     })
+
     $('.white').on("click", function () {
         totalScore = totalScore + crystal2;
         console.log("New totalScore= " + totalScore);
         $('#score').text(totalScore); 
+        if (totalScore === magicNumber) {
+            win();
+        }
+        else if (totalScore > magicNumber) {
+             lose();
+        }
+    
     })
     
     $('.blue').on("click", function () {
         totalScore = totalScore + crystal3;
         console.log("New totalScore= " + totalScore);
         $('#score').text(totalScore); 
+        if (totalScore === magicNumber) {
+             win();
+        }
+        else if (totalScore > magicNumber) {
+            lose();
+        }
     })
 
       
     $('.pink').on("click", function () {
         totalScore = totalScore + crystal4;
         console.log("New totalScore= " + totalScore);
-        $('#score').text(totalScore);        
-    })
-
-
-
+        $('#score').text(totalScore);         
     if (totalScore === magicNumber) {
-        wins++;
-        reset();
-        alert("You won!");
+         win();
     }
     else if (totalScore > magicNumber) {
-        losses++;
-        reset();
-        alert("You lost!");
+         lose();
     }
+    })
 
     function reset() {
         magicNumber = Math.floor(Math.random() * 101 + 19);       
@@ -94,9 +105,18 @@ $(document).ready(function () {
         totalScore = 0;
         $('.score').text(totalScore);
     }
-
-    
-
-
+    function win(){
+        alert("You won!");
+          wins++; 
+          $('#numberWins').text(wins);
+          reset();
+        }
+       
+        function lose(){
+        alert ("You lose!");
+          losses++;
+          $('#numberLosses').text(losses);
+          reset()
+        }
 
 });
