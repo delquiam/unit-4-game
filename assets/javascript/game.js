@@ -41,7 +41,7 @@ $(document).ready(function () {
     crystal3 = Math.floor(Math.random() * 11) + 1;
     crystal4 = Math.floor(Math.random() * 11) + 1;
 
-    $('.score').text(totalScore);//?
+    $('.score').text(totalScore);
 
     $('#numberWins').text(wins);
     $('#numberLosses').text(losses);
@@ -50,18 +50,25 @@ $(document).ready(function () {
     $('.clear').on("click", function () {
         totalScore = totalScore + crystal1;
         console.log("New totalScore= " + totalScore);
+        $('#score').text(totalScore); 
     })
     $('.white').on("click", function () {
         totalScore = totalScore + crystal2;
         console.log("New totalScore= " + totalScore);
+        $('#score').text(totalScore); 
     })
+    
     $('.blue').on("click", function () {
         totalScore = totalScore + crystal3;
         console.log("New totalScore= " + totalScore);
+        $('#score').text(totalScore); 
     })
+
+      
     $('.pink').on("click", function () {
         totalScore = totalScore + crystal4;
         console.log("New totalScore= " + totalScore);
+        $('#score').text(totalScore);        
     })
 
 

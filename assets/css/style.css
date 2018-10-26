@@ -64,9 +64,9 @@ body {
     color:  black;
     text-align:  center;
   }
-  .score{
-    border:  1px solid white;
-    position:   relative;
+  #totalScore{
+   padding:  10px;
+   margin:  10px;
   }
   
   #points{
