@@ -103,7 +103,7 @@ $(document).ready(function () {
         crystal3 = Math.floor(Math.random() * 11) + 1;
         crystal4 = Math.floor(Math.random() * 11) + 1;
         totalScore = 0;
-        $('.score').text(totalScore);
+        $('#score').text(totalScore);
     }
     function win(){
         alert("You won!");
